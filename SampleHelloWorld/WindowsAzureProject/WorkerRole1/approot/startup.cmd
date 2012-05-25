@@ -40,7 +40,7 @@ cscript "util\download.vbs" "https://<storage-account>.blob.core.windows.net/bin
 cscript util\unzip.vbs jre7.zip "%CD%"
 cscript util\unzip.vbs apache-tomcat.zip "%CD%"
 
-@REM Copy the war files to webapps
+@REM Copy the war files to webapps directory of Tomcat.
 copy %WAR_NAME% "%SERVER_DIR_NAME%\webapps\%WAR_NAME%"
 
 set JRE_HOME=\%ROLENAME%\jre7
