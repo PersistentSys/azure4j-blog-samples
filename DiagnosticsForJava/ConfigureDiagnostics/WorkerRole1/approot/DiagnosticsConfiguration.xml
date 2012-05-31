@@ -1,0 +1,12 @@
+﻿<DiagnosticsConfig StorageAccountConnectionString="DefaultEndpointsProtocol=https;
+AccountName=<account-name>;AccountKey=<account-key>">
+  <Directories>
+	<Directory ContainerName ="wad-tomcat-logs" 
+    		LocalPath ="apache-tomcat\logs"
+    		IsLocalPathRelative="true" />
+  </Directories>
+  <PerformanceCounters ScheduledTransferPeriodInSeconds="600">
+    <PerformanceCounter CounterName="\Memory\Available MBytes" SamplingRateInSeconds ="120" />
+    <PerformanceCounter CounterName="\Processor(*)\% Idle Time" SamplingRateInSeconds ="120" />
+  </PerformanceCounters>
+</DiagnosticsConfig>
